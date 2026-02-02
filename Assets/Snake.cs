@@ -107,10 +107,14 @@ public class Snake : MonoBehaviour
         if (other.tag == "Food")  // Sjekker hvilket annet objekt som kolliderte med snake (her: kun food) med Unitys tag-system
         {
             Grow();    // Påkaller så Grow()-funksjonen
+
+            // Spiller tildeles 10 poeng per matbit:
+            FindAnyObjectByType<GameManager>().AddScore(10);
         }
         else if (other.tag == "Obstacle")
         {
-            ResetState();
+            //ResetState();
+            FindAnyObjectByType<GameManager>().GameOver();
         }
     }
 }

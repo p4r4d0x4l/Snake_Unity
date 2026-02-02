@@ -6,7 +6,15 @@
 [Ll]ogs/
 UserSettings/
 
-*.csproj
-*.sln
+# IDE
+.vs/
 .vscode/
 .idea/
+
+# C#
+*.csproj
+*.sln
+
+# Unity builds
+Snake/
+*.exe
